@@ -1,0 +1,609 @@
+<!DOCTYPE>
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" >
+<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+<title>SNIKY</title>
+
+
+<link href="Css/kendo.mobile.all.min.css" rel="stylesheet" />
+<link href="Css/custome.css" rel="stylesheet" />
+
+
+<script src="JS/jquery-1.8.3.js"></script>
+<script src="JS/kendo.all.min.js"></script>
+<script src="JS/custom.js"></script>
+
+
+<script type="text/javascript" charset="utf-8" src="JS/cordova-2.7.0.js"></script>
+
+
+
+
+
+</head>
+
+<body>
+
+
+<!--Header-->
+<div data-role="layout" data-id="Login-layout">
+    <header data-role="header" style="background: #e5e3e4;">
+     <div class="Error">Invalid Email ID</div>
+    </header>
+
+</div>
+<!--Header-->
+
+
+<!--Main Menu Header-->
+<div data-role="layout" data-id="Home-layout">
+    <header data-role="header">
+        <div data-role="navbar" id="MainPageTitle">
+            <a data-align="left" class="MenuBtn" href="#Home-layout"></a>
+            <span data-role="view-title"></span>
+            <!-- <a data-align="right" data-role="button" class="nav-button" href="#/">Index</a> -->
+        </div>
+    </header>
+</div>
+<!--Main Menu Header-->
+
+
+
+
+<!--Login-->
+    <div data-role="view" id="Login-home" data-title="Login" data-layout="Login-layout" data-transition="overlay:slide" data-persist="true">
+
+		<div class="logo">
+        	<img src="images/ScreenLogo.png">
+        </div>
+
+        <div class="LoginFrieldsContainer">
+        
+            <input type="text" placeholder="Email Address" id="EmailAddress">
+            <input type="password" placeholder="Password" id="Password">
+            
+            <div align="center" id="Login">
+            <button>LogIn</button>
+            </div>
+
+            <div id="Loader" style="display:none;">
+                <img src="images/loader.GIF">
+            </div>
+        
+        </div>
+        
+	</div>
+<!--Login-->
+
+
+
+
+<!--After Login-->
+    <div data-role="view" id="Home-layout" data-title="MAIN MENU" data-layout="Home-layout" data-transition="overlay:slide" data-persist="true">
+
+    <ul data-role="listview" class="MainMenu">
+        <li>
+        <a id="MyReports">
+            <img src="images/MyReports.png">
+            <p>MY REPORTS</p>
+            <div style="clear: both"></div>
+        </a>
+        </li>
+
+        <li id="MyForms">
+        <a>
+            <img src="images/FormsIco.png">
+            <p>MY FORMS</p>
+            <div style="clear: both"></div>
+        </a>
+        </li>
+
+        <li>
+        <a id="Accounts">
+            <img src="images/AccountIco.png">
+            <p>ACCOUNT</p>
+            <div style="clear: both"></div>
+        </a>
+        </li>
+
+        <li>
+        <a id="Log">
+            <img src="images/LogIco.png">
+            <p>LOG</p>
+            <div style="clear: both"></div>
+        </a>
+        </li>
+
+        <li>
+        <a id="MediaLibrary">
+            <img src="images/MediaIco.png">
+            <p>MEDIA LIBRARY</p>
+            <div style="clear: both"></div>
+        </a>
+        </li>
+
+        <li>
+        <a id="Logout">
+            <img src="images/LogoutIco.png">
+            <p>LOGOUT</p>
+            <div style="clear: both"></div>
+        </a>
+        </li>
+
+
+
+    </ul>
+        
+	</div>
+<!--After Login-->
+
+
+
+<!--Log Activity-->
+    <div data-role="view" id="Log-layout" data-title="ACTIVITY LOG" data-layout="Home-layout" data-transition="overlay:slide" data-persist="true">
+
+
+            <div id="LogLoader">
+                <img src="images/loader.GIF">
+            </div>
+
+
+	<table class="ActivityLog" id="ActivityLogContainer">
+    	
+        <!--<tr>
+ 			<td>A Report Hass <span>Been</span> Created</td>
+            <td>7/10/2014 At 3:10pm</td>       
+        </tr>-->
+
+
+    </table>
+        
+	</div>
+<!--Log Activity End-->
+
+
+
+
+<!--My Reports Start-->
+    <div data-role="view" id="MediaLibrary-layout" data-title="MEDIA LIBRARY" data-layout="Home-layout" data-transition="overlay:slide" data-persist="true">
+
+            <div id="MediaLibraryLoader">
+                <img src="images/loader.GIF">
+            </div>
+
+        <img src="" id="dwnldImg" style="display: none;">
+
+        <table class="MediaLibraryContainer" id="MediaLibraryContainer" border="0" align="center">
+        
+            <!--<tr>
+                <td><img src="images/icons/audio_icon.png" /> </td>
+                <td><span>Words Common Mistakes in Final Presentation</span></td>
+                <td>
+                    <select>
+                        <option>Select Option</option>
+                    </select>
+                </td>
+            </tr>-->
+
+
+
+        </table>
+        
+	</div>
+<!--My Reports End-->
+
+
+
+<!--Share Media Start-->
+    <div data-role="view" id="ShareMediaLibrary-layout" data-title="SHARE MEDIA" data-layout="Home-layout" data-transition="overlay:slide" data-persist="true">
+
+
+        <div class="ShareEmail" id="ShareEmail">
+        
+            <center>
+            <input type="text" id="ShareEmailStore" placeholder="Enter Email Address..." />
+            <input type="text" id="ImageNameStore" style="display: none;" />
+            <input type="text" id="MLIDStore" style="display: none;" />
+            <button id="ShareMediaSendBtn">Send</button>
+            </center>
+
+            <div align="center" id="MsgProcessing">
+
+                 <img src="images/loader.GIF">
+
+                <p>Please wait! While we process your request</p> 
+            </div>
+
+        </div>
+
+        
+	</div>
+<!--Share Media End-->
+
+
+<!--Account Start-->
+    <div data-role="view" id="accountsetting-layout" data-title="ACCOUNT SETTING" data-layout="Home-layout" data-transition="overlay:slide" data-persist="true">
+
+
+        <div id="AccountPageMsgToDisplay">
+            Please wait while we process the data.
+        </div>   
+
+    <div class="AccountSetting" id="AccountSetting">
+    
+        <h2 class="Heading">GENERAL SETTING</h2>
+
+      <ul data-role="listview" class="AccountOptions">
+
+        <li>
+        <a href="#ChangeUserName-layout">
+            <h2>Userame</h2>
+            <p id="AccountUserName"></p>
+        </a>
+        </li>
+        
+        <li>
+        <a href="#ChangeEmailAddress-layout">
+            <h2>Email</h2>
+            <p id="AccountEmailAddress"></p>
+        </a>
+        </li>
+        
+        <li>
+        <a href="#ChangePasswordaccount-layout">
+            <h2>Password</h2>
+            <p>******</p>
+        </a>
+        </li>
+        
+
+    </ul>
+
+
+        <h2 class="Heading">ACCOUNT DETAIL</h2>
+
+        <div class="accountdetail">
+            <p id="AccountStatusMsg"></p>
+            <button id="gOTOpaymentsBtn">To Manage Your account please click here</button>
+        </div>
+        
+
+        
+	</div>
+
+
+    </div>
+<!--Account End-->
+
+
+<!--ChangePassword Start-->
+    <div data-role="view" id="ChangePasswordaccount-layout" data-title="CHANGE PASSWORD" data-layout="Home-layout" data-transition="overlay:slide" data-persist="true">
+
+    <div class="ChangeAccountDetail" id="ChangePassword">
+    <center>
+    <label>New Password</label>
+    <input type="password" id="PswdNewPassword">
+
+    <label>Confirm Password</label>
+    <input type="password" id="PswdConfirmPassword">
+
+    <button class="buttonCustome" id="ChangePasswordBtn">Change Password</button>
+
+
+        <div id="changepasswordwaitingmsg" class="commonwaitingmsg">
+            Please wait while we process your request.
+        </div>   
+
+    </center>
+    </div>
+   
+	</div>
+<!--ChangePassword End-->
+
+
+<!--ChangeUserName Start-->
+    <div data-role="view" id="ChangeUserName-layout" data-title="CHANGE USERNAME" data-layout="Home-layout" data-transition="overlay:slide" data-persist="true">
+
+    <div class="ChangeAccountDetail" id="ChangeUserNameContainer">
+    <center>
+    <label>New Username</label>
+    <input type="text" id="TxtNewUserName">
+
+    <button class="buttonCustome" id="ChangeUserNameBtn">Change Username</button>
+
+
+        <div id="changeusernamewaitingmsg" class="commonwaitingmsg">
+            Please wait while we process your request.
+        </div>   
+
+    </center>
+    </div>
+   
+	</div>
+<!--ChangeUserName End-->
+
+
+<!--ChangeEmailAddress Start-->
+    <div data-role="view" id="ChangeEmailAddress-layout" data-title="CHANGE EMAIL" data-layout="Home-layout" data-transition="overlay:slide" data-persist="true">
+
+    <div class="ChangeAccountDetail" id="ChangeEmailAddressContainer">
+    <center>
+    <label>New Email Address</label>
+    <input type="text" id="TxtNewEmailAddress">
+
+    <button class="buttonCustome" id="ChangEmailAddressBtn">Change Email Address</button>
+
+
+        <div id="changeEmailAddresswaitingmsg" class="commonwaitingmsg">
+            Please wait while we process your request.
+        </div>   
+
+    </center>
+    </div>
+   
+	</div>
+<!--ChangeEmailAddress End-->
+
+
+
+
+
+<!--payments Start-->
+    <div data-role="view" id="payments-layout" data-title="PAYMENTS" data-layout="Home-layout" data-transition="overlay:slide" data-persist="true">
+
+    <div class="paymentscontainer" id="Payments">
+
+        <h2>Account Status</h2>
+        <p id="PAccountInfo"></p>
+  
+
+        <img src="images/paypal-logo.png">
+        <button class="buttonCustome" id="paywithPaypalBtn">Pay With PAY PAL</button>
+
+        <center>
+        <div id="paywithPaypalcontainer" align="center">
+        
+            <h2>Select Subscription Plan</h2>
+
+            <select id="ddlSubscription">
+                <option>Select Subscription Plan</option>
+            </select>
+
+            <button class="buttonCustome" onclick="SubscriptionPlanPay();">SAVE</button>
+        
+        
+        </div>
+        </center>
+
+
+        <h3>OR</h3>
+
+        <img src="images/credit_cards.png">
+        <button class="buttonCustome" id="paywithcreditcardbtn">Pay With Credit Card</button>
+
+    </div>
+   
+	</div>
+<!--payments End-->
+
+
+
+
+
+
+
+<!--ChangeEmailAddress Start-->
+    <div data-role="view" id="PaymentViaCreditCard-layout" data-title="ADD CREDIT CARD" data-layout="Home-layout" data-transition="overlay:slide" data-persist="true">
+
+    <div class="ChangeAccountDetail" id="addcreditcardcontainer">
+    <center>
+
+    <label>Card Number</label>
+    <input type="text" id="Txtcreditcardnumber" placeholder="Must be atleast of 16 digits">
+
+    <label>Card holder's Name</label>
+    <input type="text" id="txtcardholdername">
+
+    <label>Expiration Date</label>
+    <input type="text" id="txtexpirationdate">
+
+    <label>CVV</label>
+    <input type="text" id="txtcvv">
+
+
+    <button class="buttonCustome" id="addcreditcardbtn">SAVE</button>
+
+
+        <div id="creditcardaddmsg" class="commonwaitingmsg">
+            Please wait while we process your request.
+        </div>   
+
+    </center>
+    </div>
+   
+	</div>
+<!--ChangeEmailAddress End-->
+
+
+
+<!--editmyreprot Start-->
+    <div data-role="view" id="EditMyReprot-layout" data-title="EDIT REPORT" data-layout="Home-layout" data-transition="overlay:slide" data-persist="true">
+
+    <div class="ChangeAccountDetail" id="editreportcontainer">
+    <center>
+
+    <label>Report Name</label>
+    <input type="text" id="txteditreportname" placeholder="Enter Report Name">
+
+    <label>Password</label>
+    <input type="text" id="txteditpasswordreport" placeholder="Enter Password">
+
+    <button class="buttonCustome" id="BtnEditReport">SAVE</button>
+    </div>
+
+    <div style="margin-top: 20px; font-weight: normal; display: none;" id="editreportwaitingmessage">
+        Please wait while we proccess your request.
+    </div>
+    </center>
+
+	</div>
+<!--editmyreprot End-->
+
+
+
+
+
+
+
+
+
+<!--editmyforms Start-->
+    <div data-role="view" id="EditMyforms-layout" data-title="EDIT REPORT" data-layout="Home-layout" data-transition="overlay:slide" data-persist="true">
+
+    <div class="ChangeAccountDetail" id="editreportcontainer">
+    <center>
+
+    <label>Form Name</label>
+    <input type="text" id="txteditformsname" placeholder="Enter Form Name">
+
+    <label>Password</label>
+    <input type="text" id="txteditpasswordforms" placeholder="Enter Password">
+
+    <button class="buttonCustome" id="BtnEditforms">SAVE</button>
+    </div>
+
+    <div style="margin-top: 20px; font-weight: normal; display: none;" id="editformswaitingmessage">
+        Please wait while we proccess your request.
+    </div>
+    </center>
+
+	</div>
+<!--editmyforms End-->
+
+
+
+
+
+
+
+
+
+
+
+
+<!--MyReportsView Start-->
+    <div data-role="view" id="MyReportsView-layout" data-title="MY REPORTS" data-layout="Home-layout" data-transition="overlay:slide" data-persist="true">
+
+
+        <div id="myreportswaitingmsg" style="margin-top: 20px; font-weight: normal;">
+            Please wait while we process the reports.
+        </div>   
+
+
+     <ul data-role="listview" class="MyReportsDisplay" id="MyReportsDisplay">
+
+        <!--<li>
+        <a>News Title here displayed</a>
+        </li>-->
+	</ul>
+
+
+    <div class="SubMenuForReports">
+
+        <ul data-role="listview" id="menuforlockedreport">
+            <li><a id="smlockedreport">This report is Locked</a></li>
+            <li><a id="sendreportlock">Send</a></li>
+            <li><a id="deletereportlocked">Delete</a></li>
+        </ul>
+
+
+        <ul data-role="listview" id="menuforunlockedreport">
+            <li><a id="Menueditmyreport">Edit</a></li>
+            <li><a id="sendreportunlock">Send</a></li>
+            <li><a id="smdeletereportunlock">Delete</a></li>
+            <li><a id="smlockreport">Lock Report</a></li>
+        </ul>
+
+    </div>
+
+
+	</div>
+<!--MyReportsView End-->
+
+
+
+
+
+
+
+
+
+
+
+<!--MyReportsView Start-->
+    <div data-role="view" id="MyFormsView-layout" data-title="MY FORMS" data-layout="Home-layout" data-transition="overlay:slide" data-persist="true">
+
+
+        <div id="myformswaitingmsg" style="margin-top: 20px; font-weight: normal;">
+            Please wait while we process the forms.
+        </div>   
+
+
+     <ul data-role="listview" class="MyReportsDisplay" id="MyFormsDisplay">
+
+        <!--<li>
+        <a>News Title here displayed</a>
+        </li>-->
+	</ul>
+
+
+    <div class="SubMenuForForms">
+
+        <ul data-role="listview" id="menuforunlockedforms">
+            <li><a id="Menueditmyforms">Edit</a></li>
+            <li><a id="smdeleteformsunlock">Delete</a></li>
+            <li><a id="smlockforms">Lock Form</a></li>
+        </ul>
+
+    </div>
+
+
+	</div>
+<!--MyReportsView End-->
+
+
+
+
+
+
+<!--MyReportsView Start-->
+    <div data-role="view" id="sendreprot-layout" data-title="SEND REPORT" data-layout="Home-layout" data-transition="overlay:slide" data-persist="true">
+
+
+    <div class="ChangeAccountDetail" id="sendreportcontainer">
+    <center>
+
+    <label>Email ID's</label>
+    <input type="text" id="Txtemailtosendreport" placeholder="Enter comma seprated Email Address(es)">
+
+    <button class="buttonCustome" id="sendreportonemailBtn">SEND</button>
+
+    <div style="margin-top: 20px; font-weight: normal; display: none;" id="Reportsendingwaitingmsg">
+        Please wait while we proccess your request.
+    </div>
+
+	</div>
+<!--MyReportsView End-->
+
+
+
+
+
+    <script>
+		 window.kendoMobileApplication = new kendo.mobile.Application($(document.body), { platform: 'ios' });
+    </script>
+    
+</body>
+</html>
