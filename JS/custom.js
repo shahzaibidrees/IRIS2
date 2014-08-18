@@ -9,7 +9,6 @@ function onDeviceReady() {
     checkConnection();
 	document.addEventListener("backbutton", onBackKeyDown, false);
 	document.addEventListener("menubutton", onMenuKeyDown, false);
-
 }
 
 function onMenuKeyDown() {
