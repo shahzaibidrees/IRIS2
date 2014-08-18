@@ -155,7 +155,7 @@ span[data-role=view-title]
 	background-image: url(../images/MenuICO.png);
 	background-repeat:no-repeat;
 	background-position:center;
-	margin-left:-6px;
+	margin-right:-6px;
 	margin-top:18px;
 	padding:14px 15px 15px 13px;
 	height:20px;
@@ -164,6 +164,23 @@ span[data-role=view-title]
 }
 
 .MenuBtn:hover{background-color:#1e99c7;}
+
+
+.BackBtn
+{
+	background-image: url(../images/BackICO.png);
+	background-repeat:no-repeat;
+	background-position:center;
+	margin-left:-10px;
+	margin-top:18px;
+	padding:14px 15px 15px 13px;
+	height:20px;
+	width:20px;
+	background-size:35px 31px;
+}
+
+.BackBtn:hover{background-color:#1e99c7;}
+
 
 #LogLoader, #MediaLibraryLoader
 {
