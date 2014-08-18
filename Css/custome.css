@@ -87,6 +87,7 @@ div[data-role=view] .km-content
 	box-shadow: none;
 	-webkit-box-shadow: none;
 	text-shadow:none;
+	padding-top: 25px;
 }
 
 span[data-role=view-title]
@@ -154,7 +155,7 @@ span[data-role=view-title]
 	background-repeat:no-repeat;
 	background-position:center;
 	margin-left:-6px;
-	margin-top:-4px;
+	margin-top:23px;
 	padding:14px 15px 17px 13px;
 	height:20px;
 	width:20px;

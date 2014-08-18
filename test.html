@@ -1,0 +1,107 @@
+<!DOCTYPE>
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" >
+<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+<title>SNIKY</title>
+
+
+<link href="Css/kendo.mobile.all.min.css" rel="stylesheet" />
+<link href="Css/custome.css" rel="stylesheet" />
+
+<script src="JS/jquery-1.8.3.js"></script>
+<script src="JS/kendo.all.min.js"></script>
+
+
+<script>
+    
+var scroller = e.view.scroller;
+scroller.setOptions({ elastic: false });    
+
+</script>
+
+
+
+</head>
+
+<body>
+
+
+
+
+<!--Main Menu Header-->
+<div data-role="layout" data-id="Home-layout">
+    <header data-role="header">
+        <div data-role="navbar" id="MainPageTitle">
+        <a data-align="left" class="MenuBtn" href="#Home-layout"></a>
+            <span data-role="view-title"></span>
+            <!-- <a data-align="right" data-role="button" class="nav-button" href="#/">Index</a> -->
+        </div>
+    </header>
+</div>
+<!--Main Menu Header-->
+
+
+<!--Log Activity-->
+    <div data-role="view" id="MyReports-layout" data-title="MY REPORTS" data-layout="Home-layout" data-transition="overlay:slide" data-persist="true">
+
+
+
+     <ul data-role="listview" class="MyReportsDisplay">
+
+        <li>
+        <a>News Title here displayed</a>
+        </li>
+
+        <li>
+        <a>
+            <span>News Title here displayed</span>
+            <img src="images/lock.png" width="30">
+            <div style="clear: both;"></div>
+        </a>
+        </li>
+ 
+
+	</ul>
+
+
+
+    <!--<div class="SubMenuForReports">
+    
+        <ul data-role="listview">
+            <li><a>Send</a></li>
+            <li><a>Edit</a></li>
+            <li><a>Delete</a></li>
+            <li><a>Lock Report</a></li>
+        </ul>
+
+
+    </div>-->
+    
+
+
+
+
+
+
+      
+	</div>
+<!--Log Activity End-->
+
+
+
+
+
+
+
+
+
+
+    <script>
+		 window.kendoMobileApplication = new kendo.mobile.Application($(document.body), { platform: 'ios' });
+
+    </script>
+    
+</body>
+</html>
