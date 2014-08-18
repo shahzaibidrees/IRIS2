@@ -41,7 +41,7 @@
 <gap:splash src="splash/ios/Default-Portrait_at_2x.png" gap:platform="ios" width="1536" height="2008" />
 
   <preference name="DisallowOverscroll" value="true" />
-
+  <preference name="orientation" value="potriate" />
    <!--<plugin name="InAppBrowser" value="CDVInAppBrowser" />-->
 
   <access origin="*"/>
