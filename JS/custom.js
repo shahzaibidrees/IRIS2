@@ -486,6 +486,12 @@ $("#BtnEditforms").click(function(e) {
 });
 
 
+//Go Back Btn
+$("#GoBackBtn").click(function(e) {
+	alert("ok");
+});
+
+
 });
 
 
