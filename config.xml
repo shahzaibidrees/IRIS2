@@ -42,8 +42,6 @@
 
   <preference name="DisallowOverscroll" value="true" />
 
-  <preference name="Notification" value="CDVNotification" />
-    <gap:plugin name="com.pushwoosh.plugins.pushwoosh" />
    <!--<plugin name="InAppBrowser" value="CDVInAppBrowser" />-->
 
   <access origin="*"/>
