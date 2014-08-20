@@ -163,8 +163,6 @@ span[data-role=view-title]
 	background-size:35px 31px;
 }
 
-.MenuBtn:hover{background-color:#1e99c7;}
-
 
 .BackBtn
 {
@@ -178,8 +176,6 @@ span[data-role=view-title]
 	width:20px;
 	background-size:35px 31px;
 }
-
-.BackBtn:hover{background-color:#1e99c7;}
 
 
 #LogLoader, #MediaLibraryLoader

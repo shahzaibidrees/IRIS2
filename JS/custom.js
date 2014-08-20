@@ -21,28 +21,13 @@ function onBackKeyDown() {
 		if($("#Home-layout").css("display") != "none")
 		{
 
-		var closeapp=confirm("Are you sure to close this app?");
-		
-			if (closeapp==true)
-			{
-				navigator.app.exitApp(); // To exit the app!
-			}
-			else
-			{
-				return false;	
-			}
-
-		}
-		else if($("#Login-home").css("display") != "none")
-		{
-
 		navigator.notification.confirm(
             'You are the winner!',  // message
             onConfirm,              // callback to invoke with index of button pressed
             'Game Over',            // title
             'Restart,Exit'          // buttonLabels
         );
-			
+
 		}
 		else if($("#ShareMediaLibrary-layout").css("display") != "none")
 		{
