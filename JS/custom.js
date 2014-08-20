@@ -12,23 +12,25 @@ function onDeviceReady() {
 }
 
 
-function onLogoutConfirm(buttonIndex) {
-	if(buttonIndex==1)
-	{
-		Logout();
-	}
-}
+function onConfirm(buttonIndex) {
+        if(buttonIndex==1)
+		{
+			Logout();
+		}
+    }
 
 function onBackKeyDown() {
 
 		if($("#Home-layout").css("display") != "none")
 		{
-			navigator.notification.confirm(
-				'would you like to logout?', 
-				onLogoutConfirm,    
-				'IRIS',  
-				'Logout,Cancel'
-			);
+
+		navigator.notification.confirm(
+            'would you like to logout?',  // message
+            onConfirm,              // callback to invoke with index of button pressed
+            'IRIS',            // title
+            'Logout,Cancel'          // buttonLabels
+        );
+
 		}
 		else if($("#ShareMediaLibrary-layout").css("display") != "none")
 		{
