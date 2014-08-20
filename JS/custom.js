@@ -7,25 +7,10 @@ document.addEventListener("deviceready", onDeviceReady, false);
 
 function onDeviceReady() {
     checkConnection();
-	document.addEventListener("backbutton", onBackKeyDown, false);
-	document.addEventListener("menubutton", onMenuKeyDown, false);
+	//document.addEventListener("backbutton", onBackKeyDown, false);
+	//document.addEventListener("menubutton", onMenuKeyDown, false);
 }
 
-function onMenuKeyDown() {
-
-		if($("#Home-layout").css("display") == "none")
-		{
-			if($("#Login-home").css("display") != "none")
-			{
-				return false;	
-			}
-			else
-			{
-				window.location = "#Home-layout";
-			}
-		}
-
-}
 
 
 function onBackKeyDown() {
@@ -488,7 +473,7 @@ $("#BtnEditforms").click(function(e) {
 
 //Go Back Btn
 $("#GoBackBtn").click(function(e) {
-	alert("ok");
+	onBackKeyDown();
 });
 
 
