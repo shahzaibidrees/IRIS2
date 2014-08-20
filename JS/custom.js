@@ -13,7 +13,10 @@ function onDeviceReady() {
 
 
 function onConfirm(buttonIndex) {
-        alert('You selected button ' + buttonIndex);
+        if(buttonIndex==1)
+		{
+			Logout();
+		}
     }
 
 function onBackKeyDown() {
@@ -22,10 +25,10 @@ function onBackKeyDown() {
 		{
 
 		navigator.notification.confirm(
-            'You are the winner!',  // message
+            'would you like to logout?',  // message
             onConfirm,              // callback to invoke with index of button pressed
-            'Game Over',            // title
-            'Restart,Exit'          // buttonLabels
+            'IRIS',            // title
+            'Logout,Cancel'          // buttonLabels
         );
 
 		}
