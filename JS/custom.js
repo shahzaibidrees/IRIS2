@@ -125,7 +125,7 @@ $(document).ready(function (e) {
 CheckIfUserLoginStatus();
 
 
-var mobileheight = $("html body").height();
+var mobileheight = $("#MyReportsView-layout").height();
 $(".SubMenuForReports").height(mobileheight);
 
 //Logout Button	  
