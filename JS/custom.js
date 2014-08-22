@@ -541,9 +541,7 @@ $('#MyFormsDisplay li a').live('click',function(){
 		$("#menuforunlockedforms").css("display", "block");
 		var mobileheight = $(document).height();
 		mobileheight = parseInt(mobileheight) - 90;
-		$(".SubMenuForForms").height(mobileheight);
-		alert("OTAA");
-	
+		$(".SubMenuForForms").height(mobileheight);	
 });	
 
 
