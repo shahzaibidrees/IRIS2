@@ -124,10 +124,6 @@ $(document).ready(function (e) {
 
 CheckIfUserLoginStatus();
 
-alert("oty2");
-//var mobileheight = $(window).height();
-//mobileheight = parseInt(mobileheight) / 2;
-//$(".SubMenuForReports").height(mobileheight);
 
 
 //Logout Button	  
@@ -511,6 +507,11 @@ $('#MyReportsDisplay li a').live('click',function(){
 		$("#menuforunlockedreport").css("display", "block");	
 	}
 	
+	
+var mobileheight = $(document).height();
+//mobileheight = parseInt(mobileheight) / 2;
+$(".SubMenuForReports").height(mobileheight);
+alert("ok");
 });	
 
 
