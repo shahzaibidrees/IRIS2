@@ -124,10 +124,10 @@ $(document).ready(function (e) {
 
 CheckIfUserLoginStatus();
 
-
-var mobileheight = $(window).height();
+alert("oty");
+//var mobileheight = $(window).height();
 //mobileheight = parseInt(mobileheight) / 2;
-$(".SubMenuForReports").height(mobileheight);
+//$(".SubMenuForReports").height(mobileheight);
 
 
 //Logout Button	  
