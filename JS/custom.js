@@ -124,7 +124,7 @@ $(document).ready(function (e) {
 
 CheckIfUserLoginStatus();
 
-alert("oty");
+alert("oty2");
 //var mobileheight = $(window).height();
 //mobileheight = parseInt(mobileheight) / 2;
 //$(".SubMenuForReports").height(mobileheight);
