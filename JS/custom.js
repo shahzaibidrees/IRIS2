@@ -509,9 +509,9 @@ $('#MyReportsDisplay li a').live('click',function(){
 	
 	
 var mobileheight = $(document).height();
-mobileheight = parseInt(mobileheight) - 100;
+mobileheight = parseInt(mobileheight) - 90;
 $(".SubMenuForReports").height(mobileheight);
-alert("ok3");
+
 });	
 
 
@@ -539,6 +539,10 @@ $('#MyFormsDisplay li a').live('click',function(){
 //show submenu	
 		$(".SubMenuForForms").fadeIn(500);
 		$("#menuforunlockedforms").css("display", "block");
+		var mobileheight = $(document).height();
+		mobileheight = parseInt(mobileheight) - 90;
+		$(".SubMenuForForms").height(mobileheight);
+		alert("OTAA");
 	
 });	
 
