@@ -511,7 +511,7 @@ $('#MyReportsDisplay li a').live('click',function(){
 var mobileheight = $(document).height();
 mobileheight = parseInt(mobileheight) - 100;
 $(".SubMenuForReports").height(mobileheight);
-alert("ok");
+alert("ok3");
 });	
 
 
